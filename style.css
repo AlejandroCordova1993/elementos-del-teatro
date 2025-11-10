@@ -963,6 +963,7 @@ body {
   max-height: calc(100vh - 200px);
   padding: var(--space-20);
   padding-top: calc(var(--space-20) + 50px);
+  padding-bottom: 100px;
   margin-bottom: var(--space-20);
 }
 
@@ -2914,6 +2915,7 @@ img {
   .slide-content {
     padding: var(--space-12);
     padding-top: calc(var(--space-16) + 55px);
+    padding-bottom: 90px;
     max-height: calc(100vh - 180px);
   }
   
@@ -3093,17 +3095,21 @@ img {
   
   /* Navigation */
   .navigation {
-    bottom: var(--space-8);
-    gap: var(--space-6);
-    padding: var(--space-6) var(--space-10);
+    bottom: var(--space-6);
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-8);
     max-width: 98%;
+    background: rgba(102, 126, 234, 0.92);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
   }
   
   .nav-btn {
-    padding: var(--space-8) var(--space-12);
-    font-size: 12px;
-    min-height: 38px;
-    gap: var(--space-4);
+    padding: var(--space-6) var(--space-10);
+    font-size: 11px;
+    min-height: 34px;
+    gap: var(--space-3);
+    border-radius: 20px;
   }
   
   .arrow {
