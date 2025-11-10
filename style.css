@@ -65,6 +65,12 @@
   --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
   --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
 
+  /* Navigation sizing (used to reserve safe space for fixed nav) */
+  --nav-height: 80px;
+  --nav-height-mobile: 64px;
+  --nav-radius: 40px;
+  --nav-bg: rgba(102, 126, 234, 0.12);
+
   /* Common style patterns */
   --focus-ring: 0 0 0 3px var(--color-focus-ring);
   --focus-outline: 2px solid var(--color-primary);
@@ -2489,14 +2495,16 @@ img {
   position: fixed;
   top: var(--space-32);
   right: var(--space-32);
-  background: linear-gradient(135deg, var(--soft-green-accent), var(--soft-teal));
+  background: linear-gradient(135deg, #81c784, #4db6ac);
   color: white;
   padding: var(--space-16) var(--space-24);
   border-radius: 25px;
-  box-shadow: 0 6px 20px rgba(165, 214, 167, 0.4);
-  z-index: 1001;
+  box-shadow: 0 8px 28px rgba(76, 175, 80, 0.6);
+  z-index: 10001;
   animation: notificationSlide 0.5s ease;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  font-weight: var(--font-weight-bold);
 }
 
 @keyframes notificationSlide {
@@ -2819,6 +2827,9 @@ img {
     right: var(--space-16);
     left: var(--space-16);
     padding: var(--space-12) var(--space-16);
+    background: linear-gradient(135deg, #81c784, #4db6ac);
+    box-shadow: 0 6px 24px rgba(76, 175, 80, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.9);
   }
   
   /* Navigation adjustments for mobile */
@@ -2915,8 +2926,31 @@ img {
   .slide-content {
     padding: var(--space-12);
     padding-top: calc(var(--space-16) + 55px);
-    padding-bottom: 90px;
+    /* reservar espacio inferior dinámico para la barra de navegación y safe-area */
+    padding-bottom: calc(var(--nav-height-mobile, 64px) + env(safe-area-inset-bottom, 12px));
+    scroll-padding-bottom: calc(var(--nav-height-mobile, 64px) + env(safe-area-inset-bottom, 12px));
     max-height: calc(100vh - 180px);
+  }
+
+  /* Mobile-specific navigation safe-area & sizing */
+  .navigation {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(env(safe-area-inset-bottom, 12px) + 8px);
+    width: calc(100% - 32px);
+    padding: 6px 10px;
+    gap: var(--space-3);
+    border-radius: 18px;
+    z-index: 9999;
+    background: rgba(102, 126, 234, 0.92);
+    backdrop-filter: blur(6px);
+  }
+
+  .nav-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+    min-height: 36px;
   }
   
   .content-card {
@@ -4033,5 +4067,33 @@ img {
   
   .slide::before {
     animation: none;
+  }
+}
+
+/* Final mobile override: asegure que la barra de navegación no tape contenido
+   y que el contenido tenga padding-bottom suficiente (safe-area-aware) */
+@media (max-width: 480px) {
+  .navigation {
+    bottom: calc(env(safe-area-inset-bottom, 12px) + 8px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: calc(100% - 32px) !important;
+    padding: 6px 10px !important;
+    gap: var(--space-3) !important;
+    border-radius: 18px !important;
+    z-index: 99999 !important;
+    background: rgba(102, 126, 234, 0.95) !important;
+    backdrop-filter: blur(6px) !important;
+  }
+
+  .slide-content {
+    padding-bottom: calc(var(--nav-height-mobile, 64px) + env(safe-area-inset-bottom, 12px)) !important;
+    scroll-padding-bottom: calc(var(--nav-height-mobile, 64px) + env(safe-area-inset-bottom, 12px)) !important;
+  }
+
+  .nav-btn {
+    min-height: 36px !important;
+    padding: 8px 12px !important;
+    font-size: 13px !important;
   }
 }
