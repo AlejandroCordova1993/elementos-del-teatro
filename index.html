@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos del Teatro - Presentación Educativa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Title -->
+        <div class="slide active" data-slide="1">
+            <div class="slide-content title-slide">
+                <div class="theater-icon clickable" onclick="playSound('theater')">🎭</div>
+                <h1 class="main-title">ELEMENTOS DEL TEATRO</h1>
+                <p class="subtitle">✨ ¡Descubre los secretos del drama! ✨</p>
+                <div class="decorative-line"></div>
+                
+                <!-- Imagen de portada -->
+                <div class="portada-container">
+                    <img src="Imágenes/Portada.png" alt="Portada del Teatro" class="portada-image">
+                </div>
+                
+                <div class="interactive-icons">
+                    <span class="clickable-icon" onclick="showFunFact(1)">🎪</span>
+                    <span class="clickable-icon" onclick="showFunFact(2)">🎬</span>
+                    <span class="clickable-icon" onclick="showFunFact(3)">🎨</span>
+                    <span class="clickable-icon" onclick="showFunFact(4)">🎯</span>
+                </div>
+                <button class="start-btn" onclick="nextSlide()">¡Empezar la clase! 🚀</button>
+            </div>
+        </div>
+
+        <!-- Slide 2: Introduction to Theatrical Text -->
+        <div class="slide" data-slide="2">
+            <div class="slide-content">
+                <h2>🎬 ¿Qué es el Texto Teatral?</h2>
+                <div class="content-card">
+                    <div class="quick-quiz">
+                        <p class="quiz-question">🤔 <strong>¿Sabías que...?</strong></p>
+                        <div class="quiz-option clickable" onclick="revealAnswer(1)">
+                            Un texto teatral NO está hecho para leer en silencio 📚
+                        </div>
+                        <div class="quiz-answer hidden" id="answer1">
+                            ¡Correcto! 🎉 El teatro está hecho para <strong>VIVIRSE</strong> en el escenario
+                        </div>
+                    </div>
+                    
+                    <p class="highlight-text">🎬 Un <strong>guión teatral</strong> es como el GPS de una obra:</p>
+                    <ul class="feature-list">
+                        <li><strong>📖 No es para leer cómodamente,</strong> sino para actuar frente al público</li>
+                        <li><strong>🎬 Tiene DOS partes súper importantes:</strong></li>
+                    </ul>
+                    <div class="structure-boxes">
+                        <div class="structure-box box-1 clickable" onclick="showPreview('externa')">
+                            <span class="box-icon">📐</span>
+                            <h3>Estructura Externa</h3>
+                            <p class="box-hint">¡Haz clic para descubrir!</p>
+                        </div>
+                        <div class="structure-box box-2 clickable" onclick="showPreview('interna')">
+                            <span class="box-icon">💡</span>
+                            <h3>Estructura Interna</h3>
+                            <p class="box-hint">¡Haz clic para descubrir!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: External Structure Overview -->
+        <div class="slide" data-slide="3">
+            <div class="slide-content">
+                <h2>📐 Estructura Externa</h2>
+                <p class="subtitle" style="color: white; font-weight: 600; text-shadow: 2px 2px 8px rgba(0,0,0,0.3);">Cómo se organiza la obra</p>
+                <div class="content-card">
+                    <p class="intro-text" style="font-weight: 600; color: var(--dark-text);">✨ Hace referencia a los elementos que describen cómo se organiza la obra de teatro:</p>
+                    <div class="elements-grid">
+                        <div class="element-item" onclick="goToSlide(4)">
+                            <div style="font-size: 32px; margin-bottom: 8px;">🎬</div>
+                            <div>Actos</div>
+                        </div>
+                        <div class="element-item" onclick="goToSlide(5)">
+                            <div style="font-size: 32px; margin-bottom: 8px;">🎞️</div>
+                            <div>Escenas</div>
+                        </div>
+                        <div class="element-item" onclick="goToSlide(7)">
+                            <div style="font-size: 32px; margin-bottom: 8px;">🖼️</div>
+                            <div>Cuadros</div>
+                        </div>
+                        <div class="element-item" onclick="goToSlide(6)">
+                            <div style="font-size: 32px; margin-bottom: 8px;">📝</div>
+                            <div>Acotaciones</div>
+                        </div>
+                        <div class="element-item" onclick="goToSlide(8)">
+                            <div style="font-size: 32px; margin-bottom: 8px;">💬</div>
+                            <div>Parlamentos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Actos -->
+        <div class="slide" data-slide="4">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(3)">
+                    <span class="arrow">←</span> Volver a Estructura Externa
+                </button>
+                <div class="icon-header">🎭</div>
+                <h2>Actos</h2>
+                <div class="content-card">
+                    <p class="definition">Son las partes principales en que se divide la obra</p>
+                    <ul class="styled-list">
+                        <li>Cada acto representa un cambio importante en la historia</li>
+                        <li>Tradicionalmente coinciden con la caída del telón</li>
+                        <li>Las obras suelen tener <strong>3 o 5 actos</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Escenas -->
+        <div class="slide" data-slide="5">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(3)">
+                    <span class="arrow">←</span> Volver a Estructura Externa
+                </button>
+                <div class="icon-header">🎞️</div>
+                <h2>Escenas</h2>
+                <div class="content-card">
+                    <p class="definition">Son las secuencias que forman cada acto</p>
+                    <ul class="styled-list">
+                        <li>Se produce un cambio de escena cuando entra o sale un personaje del escenario</li>
+                        <li>Cada acto consta de varias escenas</li>
+                    </ul>
+                    <div class="visual-note">
+                        <span class="note-icon">💡</span>
+                        <p>Las escenas son como los capítulos dentro de cada acto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Acotaciones -->
+        <div class="slide" data-slide="6">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(3)">
+                    <span class="arrow">←</span> Volver a Estructura Externa
+                </button>
+                <div class="icon-header">📝</div>
+                <h2>Acotaciones</h2>
+                <div class="content-card">
+                    <div class="fun-comparison">
+                        <p class="comparison-title">🎬 ¡Son como las instrucciones de Netflix! 📺</p>
+                        <div class="comparison-box">
+                            <div class="comparison-item">
+                                <strong>Netflix:</strong> "Reproducir en HD"
+                            </div>
+                            <div class="comparison-item">
+                                <strong>Teatro:</strong> <em>"(Entra corriendo, muy nervioso)"</em>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="definition">Son las <strong>instrucciones secretas</strong> que el autor le da a los actores</p>
+                    <ul class="styled-list">
+                        <li>Dicen cómo debe verse el escenario (¿oscuro? ¿con música épica? 🎵)</li>
+                        <li>Explican cómo actuar: ¿enojado? ¿triste? ¿como un villano? 😈</li>
+                        <li>Siempre van <strong>entre paréntesis</strong> y en <em>cursiva</em></li>
+                    </ul>
+                    
+                    <div class="interactive-example">
+                        <p class="example-label">📱 Ejemplo moderno:</p>
+                        <div class="example-text clickable-example" onclick="animateExample('modern')">
+                            <em>(María entra checando su teléfono, preocupada porque no tiene señal)</em>
+                            <span class="click-hint">👆 ¡Haz clic para ver la acción!</span>
+                        </div>
+                    </div>
+                    
+                    <div class="example-box classical-example">
+                        <p class="example-label">🏛️ Ejemplo clásico - Prometeo Encadenado:</p>
+                        <p class="example-text"><em>(Salen a escena FUERZA y VIOLENCIA conduciendo al Titán PROMETEO. Les sigue HEFESTO llevando consigo un martillo, cadenas y una cuña. Se dirigen a una enorme roca donde colocan a PROMETEO para que HEFESTO pueda clavarlo en ella).</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Cuadros -->
+        <div class="slide" data-slide="7">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(3)">
+                    <span class="arrow">←</span> Volver a Estructura Externa
+                </button>
+                <div class="icon-header">🖼️</div>
+                <h2>Cuadros</h2>
+                <div class="content-card">
+                    <p class="definition">Son las partes de cada escena en las que cambia el decorado</p>
+                    <ul class="styled-list">
+                        <li>Representan cambios de lugar o ambiente dentro de una misma escena</li>
+                        <li>El escenario se transforma para mostrar un nuevo espacio</li>
+                        <li>Pueden ser cambios sutiles o transformaciones completas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Parlamentos -->
+        <div class="slide" data-slide="8">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(3)">
+                    <span class="arrow">←</span> Volver a Estructura Externa
+                </button>
+                <div class="icon-header">💬</div>
+                <h2>Parlamentos</h2>
+                <div class="content-card">
+                    <p class="definition">Son las palabras que los personajes deben decir</p>
+                    <p class="intro-text" style="font-weight: 600; color: var(--dark-navy);">💬 Van siempre acompañados del nombre del personaje que los dice</p>
+                    <p class="highlight-text" style="font-weight: 600;">🎯 Se clasifican en tres tipos:</p>
+                    <div class="types-grid">
+                        <div class="type-card">
+                            <span class="type-icon">🗣️</span>
+                            <h3>Monólogos</h3>
+                        </div>
+                        <div class="type-card">
+                            <span class="type-icon">💭</span>
+                            <h3>Diálogos</h3>
+                        </div>
+                        <div class="type-card">
+                            <span class="type-icon">🤫</span>
+                            <h3>Apartes</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Monólogos -->
+        <div class="slide" data-slide="9">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(8)">
+                    <span class="arrow">←</span> Volver a Parlamentos
+                </button>
+                <div class="icon-header">🗣️</div>
+                <h2>Monólogos</h2>
+                <div class="content-card">
+                    <div class="modern-reference">
+                        <p class="reference-title">💡 ¿Te suena familiar?</p>
+                        <div class="reference-box">
+                            Es como cuando un personaje de serie piensa en voz alta y escuchamos sus pensamientos internos 🧠
+                        </div>
+                    </div>
+                    
+                    <p class="definition">Un personaje habla solo... ¡pero el público lo escucha todo!</p>
+                    <ul class="styled-list">
+                        <li>Es como tener un diario hablado 📔</li>
+                        <li>El personaje expresa lo que piensa y siente</li>
+                        <li>¡Nadie más en el escenario puede oírlo!</li>
+                    </ul>
+                    
+                    <div class="pop-culture-example">
+                        <p class="example-label">🎬 Ejemplos que conoces:</p>
+                        <div class="examples-grid">
+                            <div class="example-item">
+                                📺 <strong>Stranger Things:</strong> Cuando Eleven reflexiona sola
+                            </div>
+                            <div class="example-item">
+                                🦸 <strong>Spider-Man:</strong> Cuando Peter Parker se cuestiona sus decisiones
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-box classical-example" style="margin-top: 16px;">
+                        <p class="example-label">🏛️ Ejemplo clásico - Prometeo Encadenado:</p>
+                        <p class="example-text"><em>PROMETEO: ¡Éter divino, raudas brisas, fuentes de los ríos y sonrisa infinita de las olas del mar, Madre de todo! Pero también a ti quiero invocarte, ¡disco del sol, que todo lo contemplas! Miradme: soy un dios y, sin embargo, ¡qué trato he recibido de los dioses!</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Diálogos -->
+        <div class="slide" data-slide="10">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(8)">
+                    <span class="arrow">←</span> Volver a Parlamentos
+                </button>
+                <div class="icon-header">💭</div>
+                <h2>Diálogos</h2>
+                <div class="content-card">
+                    <p class="definition">Expresión oral para el intercambio verbal entre dos o más personajes</p>
+                    <ul class="styled-list">
+                        <li>Es la conversación fluida entre personajes</li>
+                        <li>Permite desarrollar la acción y las relaciones</li>
+                        <li>Es el elemento más común en el teatro</li>
+                    </ul>
+                    <div class="visual-note">
+                        <span class="note-icon">⭐</span>
+                        <p>La mayor parte de una obra teatral está formada por diálogos</p>
+                    </div>
+                    <div class="example-box" style="margin-top: 16px; background: linear-gradient(135deg, rgba(255, 224, 178, 0.5), rgba(227, 242, 253, 0.4));">
+                        <p class="example-label">Ejemplo: Prometeo Encadenado</p>
+                        <p class="example-text"><em><strong>HERMES:</strong> A ti, ladrón del fuego, me dirijo: tu padre ordena que le digas cuáles han de ser esas bodas que amenazan con destronarle.<br><br><strong>PROMETEO:</strong> Adora, ruega, adula al poderoso, que a mí me importa Zeus menos que nada. Que impere y mande en este breve tiempo a su antojo.</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Apartes -->
+        <div class="slide" data-slide="11">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(8)">
+                    <span class="arrow">←</span> Volver a Parlamentos
+                </button>
+                <div class="icon-header">🤫</div>
+                <h2>Apartes</h2>
+                <div class="content-card">
+                    <div class="modern-reference">
+                        <p class="reference-title">🤳 Es como...</p>
+                        <div class="reference-box">
+                            Cuando un personaje te mira directamente y te cuenta un secreto que los demás no escuchan 😏
+                        </div>
+                    </div>
+                    
+                    <p class="definition">¡Secretos compartidos solo con el público! 🎭</p>
+                    <ul class="styled-list">
+                        <li>El personaje habla directamente A TI (el espectador) 👉</li>
+                        <li>Los otros personajes en escena NO lo escuchan 🙉</li>
+                        <li>Es como tener información privilegiada 🔐</li>
+                    </ul>
+                    
+                    <div class="pop-culture-example">
+                        <p class="example-label">🎬 Lo has visto en:</p>
+                        <div class="examples-grid">
+                            <div class="example-item">
+                                🏠 <strong>House of Cards:</strong> Cuando Frank Underwood te mira y comenta
+                            </div>
+                            <div class="example-item">
+                                💔 <strong>Fleabag:</strong> Cuando la protagonista te habla directamente
+                            </div>
+                            <div class="example-item">
+                                🎪 <strong>The Office:</strong> Cuando miran a la cámara
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interactive-demo">
+                        <p class="demo-title">💬 Ejemplo interactivo:</p>
+                        <div class="demo-box">
+                            <strong>María:</strong> Sí, me encanta tu ensayo... <span class="aparte-text">(Al público) ¡Qué aburrido! 😴</span>
+                        </div>
+                        <p class="demo-note">¡Nota cómo María finge ante su compañero pero nos dice la verdad!</p>
+                    </div>
+                    
+                    <div class="visual-note">
+                        <span class="note-icon">📱</span>
+                        <p>Es como romper la "cuarta pared" - imagina que la pantalla o el escenario es invisible y el personaje puede hablarte</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Internal Structure Overview -->
+        <div class="slide" data-slide="12">
+            <div class="slide-content">
+                <h2>💡 Estructura Interna</h2>
+                <p class="subtitle" style="color: white; font-weight: 600; text-shadow: 2px 2px 8px rgba(0,0,0,0.3);">La esencia de la obra</p>
+                <div class="content-card">
+                    <p class="intro-text" style="font-weight: 600; color: var(--dark-text);">✨ Se refiere a aquellos aspectos que revelan la esencia de la obra: sus intereses internos, estilos, éticos, políticos, etc.</p>
+                    <div class="elements-grid">
+                        <div class="element-item" onclick="goToSlide(13)">
+                            <div style="font-size: 32px; margin-bottom: 8px;">🎯</div>
+                            <div>Tema</div>
+                        </div>
+                        <div class="element-item" onclick="goToSlide(14)">
+                            <div style="font-size: 32px; margin-bottom: 8px;">⚡</div>
+                            <div>Acción</div>
+                        </div>
+                        <div class="element-item" onclick="goToSlide(15)">
+                            <div style="font-size: 32px; margin-bottom: 8px;">⏰</div>
+                            <div>Tiempo</div>
+                        </div>
+                        <div class="element-item" onclick="goToSlide(16)">
+                            <div style="font-size: 32px; margin-bottom: 8px;">📚</div>
+                            <div>Argumento</div>
+                        </div>
+                        <div class="element-item" onclick="goToSlide(17)">
+                            <div style="font-size: 32px; margin-bottom: 8px;">⚔️</div>
+                            <div>Conflicto</div>
+                        </div>
+                        <div class="element-item" onclick="goToSlide(18)">
+                            <div style="font-size: 32px; margin-bottom: 8px;">✍️</div>
+                            <div>Lenguaje Literario</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Tema -->
+        <div class="slide" data-slide="13">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(12)">
+                    <span class="arrow">←</span> Volver a Estructura Interna
+                </button>
+                <div class="icon-header">🎯</div>
+                <h2>Tema</h2>
+                <div class="content-card">
+                    <p class="definition">Es la idea fundamental o abstracción que el autor quiere transmitir</p>
+                    <p class="intro-text" style="font-weight: 600; color: var(--dark-navy);">🎯 Puede haber varios ejes temáticos, pero suele haber un tema central</p>
+                    <div class="examples-box">
+                        <p class="example-label">Ejemplos de temas:</p>
+                        <div class="tags-container">
+                            <span class="tag">La muerte</span>
+                            <span class="tag">El amor</span>
+                            <span class="tag">La vejez</span>
+                            <span class="tag">El coraje</span>
+                            <span class="tag">La culpa</span>
+                            <span class="tag">La justicia</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <p>❓ <strong>¿De qué nos quiso hablar el autor?</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 14: Acción -->
+        <div class="slide" data-slide="14">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(12)">
+                    <span class="arrow">←</span> Volver a Estructura Interna
+                </button>
+                <div class="icon-header">⚡</div>
+                <h2>Acción</h2>
+                <div class="content-card">
+                    <p class="definition">Son los acontecimientos que ocurren durante el desarrollo de la obra</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 15: Tiempo -->
+        <div class="slide" data-slide="15">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(12)">
+                    <span class="arrow">←</span> Volver a Estructura Interna
+                </button>
+                <div class="icon-header">⏰</div>
+                <h2>Tiempo</h2>
+                <div class="content-card">
+                    <div class="time-types">
+                        <div class="time-card">
+                            <h3>⏳ Tiempo de la acción</h3>
+                            <p>Cuando transcurre la obra (tiempo de la historia)</p>
+                        </div>
+                        <div class="time-card">
+                            <h3>⏱️ Tiempo de la representación</h3>
+                            <p>Lo que dura la obra (tiempo real)</p>
+                        </div>
+                    </div>
+                    <p class="intro-text" style="font-weight: 600; color: var(--dark-navy);">⏰ El tiempo puede ser:</p>
+                    <div class="tags-container">
+                        <span class="tag">Histórico</span>
+                        <span class="tag">Mítico</span>
+                        <span class="tag">Actual</span>
+                        <span class="tag">Indefinido</span>
+                    </div>
+                    <p class="note-text">Se indica a través de diálogos, escenografía y vestuario</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 16: Argumento -->
+        <div class="slide" data-slide="16">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(12)">
+                    <span class="arrow">←</span> Volver a Estructura Interna
+                </button>
+                <div class="icon-header">📚</div>
+                <h2>Argumento</h2>
+                <div class="content-card">
+                    <p class="definition">Es el resumen de la historia que se cuenta en la obra</p>
+                    <ul class="styled-list">
+                        <li>Es la trama: los hechos que se van encadenando</li>
+                        <li>Es lo fáctico, lo que realmente sucede</li>
+                    </ul>
+                    <div class="question-box">
+                        <p>❓ <strong>¿Qué pasó en la obra?</strong></p>
+                    </div>
+                    <div class="visual-note">
+                        <span class="note-icon">📖</span>
+                        <p>El argumento es la historia concreta que se cuenta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 17: Conflicto -->
+        <div class="slide" data-slide="17">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(12)">
+                    <span class="arrow">←</span> Volver a Estructura Interna
+                </button>
+                <div class="icon-header">⚔️</div>
+                <h2>Conflicto</h2>
+                <div class="content-card">
+                    <p class="definition">Es la oposición de fuerzas que genera tensión en la historia</p>
+                    <ul class="styled-list">
+                        <li>Es el motor que mueve la acción</li>
+                        <li>Sin conflicto no hay drama</li>
+                        <li>Mantiene el interés del público</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 18: Lenguaje Literario -->
+        <div class="slide" data-slide="18">
+            <div class="slide-content">
+                <button class="back-btn" onclick="goToSlide(12)">
+                    <span class="arrow">←</span> Volver a Estructura Interna
+                </button>
+                <div class="icon-header">✍️</div>
+                <h2>Lenguaje Literario</h2>
+                <div class="content-card">
+                    <p class="definition">En los parlamentos se corresponde con el lenguaje hablado</p>
+                    <ul class="styled-list">
+                        <li>Usa el registro de lengua particular de cada personaje</li>
+                        <li>Puede ser más explicativo, literario o poético</li>
+                        <li>Varía según la elección del autor y puede cambiar en diferentes partes de la obra</li>
+                    </ul>
+                    <div class="examples-box">
+                        <p class="example-label">Recursos estilísticos:</p>
+                        <div class="tags-container">
+                            <span class="tag">Metáforas</span>
+                            <span class="tag">Ironía</span>
+                            <span class="tag">Hipérboles</span>
+                            <span class="tag">Símiles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 19: Interactive Quiz -->
+        <div class="slide" data-slide="19">
+            <div class="slide-content">
+                <h2>🧠 ¡Quiz de Teatro! 🎮</h2>
+                <div class="content-card quiz-card">
+                    <div class="quiz-header">
+                        <div class="quiz-score">Puntuación: <span id="quizScore">0</span>/10 🏆</div>
+                    </div>
+                    
+                    <div class="quiz-question-container" id="quizContainer">
+                        <!-- Pregunta 1 -->
+                        <div class="quiz-question" id="q1">
+                            <h3>1️⃣ Pregunta 1</h3>
+                            <p class="question-text">¿Qué son las acotaciones en una obra de teatro?</p>
+                            <div class="quiz-options">
+                                <div class="quiz-option" onclick="selectAnswer(1, 'A')" data-answer="A">A) Los diálogos más importantes de los personajes</div>
+                                <div class="quiz-option" onclick="selectAnswer(1, 'B')" data-answer="B">B) Las instrucciones para actores y técnicos sobre cómo actuar o cómo debe verse el escenario</div>
+                                <div class="quiz-option" onclick="selectAnswer(1, 'C')" data-answer="C">C) El resumen de la obra</div>
+                                <div class="quiz-option" onclick="selectAnswer(1, 'D')" data-answer="D">D) El nombre de los actos</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 2 -->
+                        <div class="quiz-question" id="q2">
+                            <h3>2️⃣ Pregunta 2</h3>
+                            <p class="question-text">¿Cuándo se produce un cambio de escena?</p>
+                            <div class="quiz-options">
+                                <div class="quiz-option" onclick="selectAnswer(2, 'A')" data-answer="A">A) Cuando cambia el decorado</div>
+                                <div class="quiz-option" onclick="selectAnswer(2, 'B')" data-answer="B">B) Cuando entra o sale un personaje del escenario</div>
+                                <div class="quiz-option" onclick="selectAnswer(2, 'C')" data-answer="C">C) Cuando termina un acto</div>
+                                <div class="quiz-option" onclick="selectAnswer(2, 'D')" data-answer="D">D) Cada 10 minutos</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 3 -->
+                        <div class="quiz-question" id="q3">
+                            <h3>3️⃣ Pregunta 3</h3>
+                            <p class="question-text">¿Qué es un monólogo?</p>
+                            <div class="quiz-options">
+                                <div class="quiz-option" onclick="selectAnswer(3, 'A')" data-answer="A">A) Cuando un personaje habla solo y el público escucha sus pensamientos</div>
+                                <div class="quiz-option" onclick="selectAnswer(3, 'B')" data-answer="B">B) Una conversación entre dos personajes</div>
+                                <div class="quiz-option" onclick="selectAnswer(3, 'C')" data-answer="C">C) Un secreto compartido con el público</div>
+                                <div class="quiz-option" onclick="selectAnswer(3, 'D')" data-answer="D">D) Una instrucción del director</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 4 -->
+                        <div class="quiz-question" id="q4">
+                            <h3>4️⃣ Pregunta 4</h3>
+                            <p class="question-text">¿Cuál NO es un tipo de parlamento?</p>
+                            <div class="quiz-options">
+                                <div class="quiz-option" onclick="selectAnswer(4, 'A')" data-answer="A">A) Monólogo</div>
+                                <div class="quiz-option" onclick="selectAnswer(4, 'B')" data-answer="B">B) Diálogo</div>
+                                <div class="quiz-option" onclick="selectAnswer(4, 'C')" data-answer="C">C) Aparte</div>
+                                <div class="quiz-option" onclick="selectAnswer(4, 'D')" data-answer="D">D) Acotación</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 5 -->
+                        <div class="quiz-question" id="q5">
+                            <h3>5️⃣ Pregunta 5</h3>
+                            <p class="question-text">¿Cuál de estos elementos pertenece a la estructura EXTERNA de la obra?</p>
+                            <div class="quiz-options">
+                                <div class="quiz-option" onclick="selectAnswer(5, 'A')" data-answer="A">A) Tema</div>
+                                <div class="quiz-option" onclick="selectAnswer(5, 'B')" data-answer="B">B) Conflicto</div>
+                                <div class="quiz-option" onclick="selectAnswer(5, 'C')" data-answer="C">C) Actos</div>
+                                <div class="quiz-option" onclick="selectAnswer(5, 'D')" data-answer="D">D) Argumento</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 6 -->
+                        <div class="quiz-question" id="q6">
+                            <h3>6️⃣ Pregunta 6</h3>
+                            <p class="question-text">¿Cuál de estos elementos pertenece a la estructura INTERNA de la obra?</p>
+                            <div class="quiz-options">
+                                <div class="quiz-option" onclick="selectAnswer(6, 'A')" data-answer="A">A) Escenas</div>
+                                <div class="quiz-option" onclick="selectAnswer(6, 'B')" data-answer="B">B) Conflicto</div>
+                                <div class="quiz-option" onclick="selectAnswer(6, 'C')" data-answer="C">C) Actos</div>
+                                <div class="quiz-option" onclick="selectAnswer(6, 'D')" data-answer="D">D) Cuadros</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 7 -->
+                        <div class="quiz-question" id="q7">
+                            <h3>7️⃣ Pregunta 7</h3>
+                            <p class="question-text">¿Qué es un "aparte" en teatro?</p>
+                            <div class="quiz-options">
+                                <div class="quiz-option" onclick="selectAnswer(7, 'A')" data-answer="A">A) Cuando termina un acto</div>
+                                <div class="quiz-option" onclick="selectAnswer(7, 'B')" data-answer="B">B) Cuando un personaje comparte un secreto solo con el público, sin que los demás personajes lo escuchen</div>
+                                <div class="quiz-option" onclick="selectAnswer(7, 'C')" data-answer="C">C) Una conversación privada entre dos personajes</div>
+                                <div class="quiz-option" onclick="selectAnswer(7, 'D')" data-answer="D">D) El final de una escena</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 8 -->
+                        <div class="quiz-question" id="q8">
+                            <h3>8️⃣ Pregunta 8</h3>
+                            <p class="question-text">¿Qué son los dos tipos de tiempo en teatro?</p>
+                            <div class="quiz-options">
+                                <div class="quiz-option" onclick="selectAnswer(8, 'A')" data-answer="A">A) Tiempo pasado y tiempo futuro</div>
+                                <div class="quiz-option" onclick="selectAnswer(8, 'B')" data-answer="B">B) Tiempo de la acción (de la historia) y tiempo de la representación (duración real)</div>
+                                <div class="quiz-option" onclick="selectAnswer(8, 'C')" data-answer="C">C) Tiempo de ensayo y tiempo de función</div>
+                                <div class="quiz-option" onclick="selectAnswer(8, 'D')" data-answer="D">D) Tiempo de día y tiempo de noche</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 9 -->
+                        <div class="quiz-question" id="q9">
+                            <h3>9️⃣ Pregunta 9</h3>
+                            <p class="question-text">¿Qué es el conflicto en una obra de teatro?</p>
+                            <div class="quiz-options">
+                                <div class="quiz-option" onclick="selectAnswer(9, 'A')" data-answer="A">A) Una pelea física entre personajes</div>
+                                <div class="quiz-option" onclick="selectAnswer(9, 'B')" data-answer="B">B) El final trágico de la obra</div>
+                                <div class="quiz-option" onclick="selectAnswer(9, 'C')" data-answer="C">C) La oposición de fuerzas que genera tensión y mueve la acción de la historia</div>
+                                <div class="quiz-option" onclick="selectAnswer(9, 'D')" data-answer="D">D) Los problemas del director con los actores</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 10 -->
+                        <div class="quiz-question" id="q10">
+                            <h3>🔟 Pregunta 10</h3>
+                            <p class="question-text">¿Cuántos actos suelen tener tradicionalmente las obras de teatro?</p>
+                            <div class="quiz-options">
+                                <div class="quiz-option" onclick="selectAnswer(10, 'A')" data-answer="A">A) Siempre 2 actos</div>
+                                <div class="quiz-option" onclick="selectAnswer(10, 'B')" data-answer="B">B) Generalmente 3 o 5 actos</div>
+                                <div class="quiz-option" onclick="selectAnswer(10, 'C')" data-answer="C">C) Solo 1 acto largo</div>
+                                <div class="quiz-option" onclick="selectAnswer(10, 'D')" data-answer="D">D) Entre 10 y 15 actos</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-submit-container">
+                        <button class="quiz-submit-btn" onclick="submitQuiz()">📝 Enviar Respuestas 🎯</button>
+                    </div>
+                    
+                    <div class="quiz-results hidden" id="quizResults">
+                        <div class="results-content">
+                            <h3 id="resultsTitle">🎉 ¡Resultados!</h3>
+                            <div class="results-emoji" id="resultsEmoji">🎭</div>
+                            <p id="resultsMessage">¡Genial!</p>
+                            <button class="quiz-btn" onclick="restartQuiz()">🔄 Intentar de nuevo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 20: Romeo y Julieta Activity -->
+        <div class="slide" data-slide="20">
+            <div class="slide-content">
+                <h2>📖 Actividad: Romeo y Julieta</h2>
+                <div class="content-card">
+                    <div class="activity-header">
+                        <div class="activity-icon">🎭</div>
+                        <p class="activity-intro">Lee con atención el fragmento proporcionado de la obra <strong>Romeo y Julieta</strong> de William Shakespeare. Luego, en tu hoja de carpeta, responde a los siguientes puntos de análisis:</p>
+                    </div>
+
+                    <div class="activity-section">
+                        <h3>📚 Parte 1: Análisis del Fragmento</h3>
+                        <div class="activity-questions">
+                            <div class="activity-question">
+                                <span class="question-number">1.</span>
+                                <div class="question-content">
+                                    <strong>Género Literario:</strong> ¿Consideras que esta obra pertenece al género tragedia o comedia? Justifica tu respuesta.
+                                </div>
+                            </div>
+                            
+                            <div class="activity-question">
+                                <span class="question-number">2.</span>
+                                <div class="question-content">
+                                    <strong>Personajes:</strong> Identifica y lista los personajes que aparecen o intervienen en el fragmento leído.
+                                </div>
+                            </div>
+                            
+                            <div class="activity-question">
+                                <span class="question-number">3.</span>
+                                <div class="question-content">
+                                    <strong>Ubicación en la obra:</strong> Indica a qué <em>Número de Acto</em> y <em>Número de Escena</em> corresponde el fragmento.
+                                </div>
+                            </div>
+                            
+                            <div class="activity-question">
+                                <span class="question-number">4.</span>
+                                <div class="question-content">
+                                    <strong>Comprensión lectora:</strong> Describe con tus propias palabras qué está sucediendo en esta escena. ¿Cuál es el conflicto o situación principal?
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-section" style="margin-top: 24px;">
+                        <h3>🔍 Parte 2: Investigación de Autor</h3>
+                        <div class="activity-task">
+                            <p>Para finalizar tu trabajo, realiza una breve investigación y escribe en tu hoja:</p>
+                            <ul class="activity-list">
+                                <li>📝 <strong>Biografía de William Shakespeare</strong> (fechas de nacimiento/muerte, nacionalidad)</li>
+                                <li>📚 <strong>Obras más importantes</strong> además de Romeo y Julieta</li>
+                                <li>📖 <strong>Resumen de la trama</strong> completa de Romeo y Julieta</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="activity-images">
+                        <h3>📄 Fragmento de la obra:</h3>
+                        <div class="image-gallery">
+                            <div class="image-item" onclick="openImageModal('Imágenes/Romeo y Julieta 1.png')">
+                                <img src="Imágenes/Romeo y Julieta 1.png" alt="Romeo y Julieta - Página 1" loading="lazy">
+                                <p class="image-caption">Página 1 - Haz clic para ampliar</p>
+                            </div>
+                            <div class="image-item" onclick="openImageModal('Imágenes/Romeo y Julieta 2.png')">
+                                <img src="Imágenes/Romeo y Julieta 2.png" alt="Romeo y Julieta - Página 2" loading="lazy">
+                                <p class="image-caption">Página 2 - Haz clic para ampliar</p>
+                            </div>
+                            <div class="image-item" onclick="openImageModal('Imágenes/Romeo y Julieta 3.png')">
+                                <img src="Imágenes/Romeo y Julieta 3.png" alt="Romeo y Julieta - Página 3" loading="lazy">
+                                <p class="image-caption">Página 3 - Haz clic para ampliar</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-tips">
+                        <h4>💡 Consejos para tu análisis:</h4>
+                        <ul class="tips-list">
+                            <li>✓ Lee el fragmento varias veces para comprenderlo mejor</li>
+                            <li>✓ Identifica las acotaciones (recuerda: van entre paréntesis)</li>
+                            <li>✓ Observa los parlamentos de cada personaje</li>
+                            <li>✓ Usa lo que aprendiste en esta presentación</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 21: Summary -->
+        <div class="slide" data-slide="21">
+            <div class="slide-content">
+                <h2>📚 Mapa Mental del Teatro</h2>
+                <div class="content-card summary-card">
+                    <div class="summary-tree">
+                        <div class="tree-root clickable" onclick="animateTree()">🎭 TEXTO TEATRAL</div>
+                        <div class="tree-branches">
+                            <div class="tree-branch hoverable">
+                                <div class="branch-title">📐 Estructura Externa</div>
+                                <p class="branch-subtitle">(Cómo se organiza)</p>
+                                <ul class="branch-list">
+                                    <li>🎬 Actos (las partes principales)</li>
+                                    <li>🎞️ Escenas (cuando entra/sale alguien)</li>
+                                    <li>🖼️ Cuadros</li>
+                                    <li>📝 Acotaciones (instrucciones secretas)</li>
+                                    <li>💬 Parlamentos (lo que dicen)
+                                        <ul class="sub-list">
+                                            <li>→ 🗣️ Monólogos</li>
+                                            <li>→ 💭 Diálogos</li>
+                                            <li>→ 🤫 Apartes</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tree-branch hoverable">
+                                <div class="branch-title">💡 Estructura Interna</div>
+                                <p class="branch-subtitle">(Qué contiene)</p>
+                                <ul class="branch-list">
+                                    <li>🎯 Tema (el mensaje)</li>
+                                    <li>⚡ Acción (lo que pasa)</li>
+                                    <li>⏰ Tiempo (cuándo sucede)</li>
+                                    <li>📚 Argumento (la historia)</li>
+                                    <li>⚔️ Conflicto (el problema)</li>
+                                    <li>✍️ Lenguaje Literario (cómo se dice)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 22: Final Slide -->
+        <div class="slide" data-slide="22">
+            <div class="slide-content final-slide">
+                <div class="theater-icon big clickable" onclick="celebrate()">🎭</div>
+                <h1 class="main-title">¡A Crear Teatro!</h1>
+                <div class="celebration-emojis">
+                    <span class="floating-emoji">🌟</span>
+                    <span class="floating-emoji">✨</span>
+                    <span class="floating-emoji">🎪</span>
+                    <span class="floating-emoji">✨</span>
+                    <span class="floating-emoji">🌟</span>
+                </div>
+                <div class="final-message">
+                    <p class="highlight-text" style="font-size: clamp(18px, 2.5vw, 22px); color: var(--pure-white); text-shadow: 2px 2px 8px rgba(0,0,0,0.3);">🎨 ¡Ya eres un experto en elementos teatrales! 🎭</p>
+                    <div class="encouragement-box">
+                        <p style="font-size: clamp(17px, 2.2vw, 20px);">🌟 <strong>Ahora puedes:</strong></p>
+                        <ul class="achievement-list">
+                            <li>📖 Leer cualquier obra de teatro</li>
+                            <li>🎬 Entender cómo funciona una obra</li>
+                            <li>✍️ Escribir tu propia historia teatral</li>
+                            <li>🎭 Participar en obras escolares</li>
+                        </ul>
+                    </div>
+                    <div class="final-actions">
+                        <button class="action-btn" onclick="goToSlide(1)">🔄 Volver al inicio</button>
+                    </div>
+                    <p class="inspiring-text">✨ El teatro espera tus ideas ✨</p>
+                    <p class="inspiring-text">🎬 ¡Tu creatividad es el guión perfecto! 🎬</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="navigation">
+            <button id="prevBtn" class="nav-btn" aria-label="Diapositiva anterior">
+                <span class="arrow">←</span> Anterior
+            </button>
+            <div class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides">20</span>
+            </div>
+            <button id="nextBtn" class="nav-btn" aria-label="Siguiente diapositiva">
+                Siguiente <span class="arrow">→</span>
+            </button>
+        </div>
+
+        <!-- Progress Dots -->
+        <div class="progress-dots" id="progressDots"></div>
+        
+        <!-- Fun Facts Modal -->
+        <div class="modal hidden" id="funFactModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>🤯 ¡Dato Curioso!</h3>
+                    <button class="close-btn" onclick="closeModal()">&times;</button>
+                </div>
+                <div class="modal-body" id="funFactContent">
+                    <!-- Content will be injected here -->
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-btn" onclick="closeModal()">¡Genial! 👍</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Notifications -->
+        <div class="notification hidden" id="notification">
+            <div class="notification-content">
+                <span class="notification-icon">🎉</span>
+                <span class="notification-text">¡Buen trabajo!</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
