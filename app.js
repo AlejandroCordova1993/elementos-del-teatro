@@ -131,7 +131,6 @@ function nextSlide() {
     if (currentSlide < totalSlides) {
         currentSlide++;
         updateSlide();
-        showNotification('¡Avanzando! ⭐');
     }
 }
 
@@ -140,7 +139,6 @@ function prevSlide() {
     if (currentSlide > 1) {
         currentSlide--;
         updateSlide();
-        showNotification('¡Regresando! ⬅️');
     }
 }
 
